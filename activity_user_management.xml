@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_light">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="👥 Quản Lý Người Dùng"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:background="@color/primary_blue"
+        android:padding="16dp"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <!-- Danh sách người dùng -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerUsers"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp" />
+
+    <!-- Nút thêm người dùng mới -->
+    <Button
+        android:id="@+id/btnAddUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="➕ Thêm Người Dùng Mới (STAFF)"
+        android:layout_margin="16dp"
+        android:backgroundTint="#FF9800"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quay lại"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/primary_dark"
+        android:textColor="@color/white" />
+
+</LinearLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_light">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="🔧 Trang Quản Trị - Admin"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:background="@color/primary_blue"
+        android:padding="16dp"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <!-- Nút Quản lý Q&A -->
+    <Button
+        android:id="@+id/btnManageQA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📝 Quản lý Câu hỏi - Trả lời Chatbot"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/primary_blue"
+        android:textColor="@color/white" />
+
+    <!-- Danh sách Q&A -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerQA"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp" />
+
+    <!-- Nút Quản lý Người dùng -->
+    <Button
+        android:id="@+id/btnManageUsers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="👥 Quản lý Người dùng (Tạo STAFF)"
+        android:layout_margin="16dp"
+        android:backgroundTint="#FF9800"
+        android:textColor="@color/white" />
+
+    <!-- Nút Quay lại -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quay lại"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/primary_dark"
+        android:textColor="@color/white" />
+
+    <!-- Nút Thêm Q&A mới -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddQA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="24dp"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:tint="@color/white"
+        android:contentDescription="Thêm câu hỏi mới" />
+
+</LinearLayout>

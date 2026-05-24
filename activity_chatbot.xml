@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_light">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="💬 Chatbot Tư Vấn Sức Khỏe"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:background="@color/primary_blue"
+        android:padding="16dp"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <!-- Khu vực chat -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp" />
+
+    <!-- Phần nhập tin nhắn -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@color/white">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Nhập câu hỏi của bạn..."
+            android:maxLines="3" />
+
+        <Button
+            android:id="@+id/btnSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gửi"
+            android:backgroundTint="@color/primary_blue"
+            android:textColor="@color/white"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Phần ĐÁNH GIÁ CHẤT LƯỢNG (sẽ hiện sau khi bot trả lời) -->
+    <LinearLayout
+        android:id="@+id/layoutRating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:background="@color/white"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đánh giá câu trả lời:"
+            android:textSize="16sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="12dp" />
+
+        <Button
+            android:id="@+id/btnSatisfied"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="👍 Hài lòng"
+            android:backgroundTint="#4CAF50" />
+
+        <Button
+            android:id="@+id/btnNotSatisfied"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="👎 Không hài lòng"
+            android:backgroundTint="#F44336"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Nút Liên hệ dược sĩ (chỉ hiện khi không hài lòng) -->
+    <Button
+        android:id="@+id/btnContactPharmacist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📞 Liên hệ Dược sĩ ngay"
+        android:backgroundTint="@color/primary_blue"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:layout_margin="12dp" />
+
+</LinearLayout>
